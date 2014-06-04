@@ -1,6 +1,6 @@
 {
   "name": "cloudstorage",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Simpel Node.js wrapper for the Vero API",
   "bugs": {
     "email": "devs@hubdoc.com",
