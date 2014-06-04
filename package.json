@@ -1,0 +1,23 @@
+{
+  "name": "cloudstorage",
+  "version": "0.0.1",
+  "description": "Simpel Node.js wrapper for the Vero API",
+  "bugs": {
+    "email": "devs@hubdoc.com",
+    "url": "https://github.com/hubdoc/vero-node/issues"
+  },
+  "repositories": [
+    {
+      "type": "git",
+      "url": "git+ssh://git@github.com/hubdoc/vero-node.git"
+    }
+  ],
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.4.0"
+  },
+  "directories": {
+  }
+}
