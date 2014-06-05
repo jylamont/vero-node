@@ -6,27 +6,29 @@ var dev_mode = true;
 
 var veroLogger = new Vero(auth_token, dev_mode);
 
-// veroLogger.addUser(1982, 'dmckenna@hubdoc.com', function () {
-//     console.log(arguments);
-// });
+var user_id = 1982
 
-// veroLogger.editUser(1982, {name: 'peter'}, function () {
-//     console.log(arguments);
-// });
-
-// veroLogger.addTags(1982, '["chewbacca", "han"]', function () {
-//     console.log(arguments);
-// });
-
-// veroLogger.removeTags(1982, '["chewbacca"]', function () {
-//     console.log(arguments);
-// });
-
-// veroLogger.addEvent(1982, 'uploaded_doc', {doc_type: 'pdf'},
-// function (err, res, body) {
+// veroLogger.addUser(user_id, 'dmckenna@hubdoc.com', function (err, res, body) {
 //     console.log(body);
 // });
 
-veroLogger.unsubscribeUser(1982, function (err, res, body) {
+// veroLogger.editUser(user_id, {name: 'peter'}, function (err, res, body) {
+//     console.log(body);
+// });
+
+// veroLogger.addTags(user_id, '["chewbacca", "han"]', function (err, res, body) {
+//     console.log(body);
+// });
+
+// veroLogger.removeTags(user_id, '["chewbacca"]', function (err, res, body) {
+//     console.log(body);
+// });
+
+veroLogger.addEvent(user_id, 'uploaded_doc', {doc_type: 'pdf'},
+function (err, res, body) {
     console.log(body);
 });
+
+// veroLogger.unsubscribeUser(user_id, function (err, res, body) {
+//     console.log(body);
+// });
