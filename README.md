@@ -1,18 +1,32 @@
-# Usage
+# vero-node
+
+A node.js client for [Vero](https://www.getvero.com)
+
+## Usage
+
 ```js
-var Vero = require('vero-node').EventLogger;
-var authToken = process.env['VERO_TOKEN'];
-var devMode = true; // false in PRODN
-var veroLogger = new Vero(authToken, devMode);
+var Vero = require('vero-node').Vero;
+var veroClient = new Vero("YOUR_AUTH_TOKEN");
 
-veroLogger.addUser(1982, 'user@person.com', function (err, res, body) {
-    if (err) return console.log(err);
-    console.log(body); // { status: 200, message: 'Success.' }
-});
+veroClient.identify({
+  id: 'jeff@yourdomain.com'
+  , userProperties: {
+    firstName: 'Jeff'
+    , lastName: 'Kane'
+  }
+})
 
-veroLogger.addEvent(1982, 'uploaded_doc', {doc_type: 'pdf'}, function (err, res, body) {
-    if (err) return console.log(err);
-    console.log(body); // { status: 200, message: 'Success.' }
-});
-
+veroClient.track({
+  id: 'jeff@yourdomain.com'
+  , eventName: 'view_product'
+  , eventProperties: {
+    sku: 'TS123'
+    , color: 'Blue'
+    , size: 12
+  }
+})
 ```
+
+## Documentation
+
+Documentation is available at [https://www.getvero.com/docs/api/node](https://www.getvero.com/docs/api/node)
